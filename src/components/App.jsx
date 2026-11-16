@@ -21,11 +21,17 @@ function App() {
     listItems()
   }, [])
 
+  function addListing (newListings){
+    setListings(previousListings=>
+    [...previousListings, newListings]
+    )
+  }
+
 
   return (
     <div className="app">
       <Header />
-      <ListingForm />
+      <ListingForm addListing={addListing} />
       <ListingsContainer listings={listings} />
     </div>
   );
