@@ -5,6 +5,8 @@ import ListingsContainer from "./ListingsContainer";
 
 function App() {
   const [listings, setListings] = useState([])
+  
+  //Function to list items GET
   function listItems() {
     fetch("http://localhost:6001/listings")
       .then(r => {
@@ -21,7 +23,7 @@ function App() {
     listItems()
   }, [])
 
-  //function to add items to the page GET
+  //function to add items to the page POST
   function addListing(newListings) {
     setListings(previousListings =>
       [...previousListings, newListings]
@@ -35,9 +37,16 @@ function App() {
         listing.id === updatedListing.id ?
           updateListing : listing
       }
-      )}
-    )}
+      )
+    }
+    )
+  }
+  //function handle deleting DELETE
+  function deleteListing(deletedListingId) {
+    setListings(previousListings =>
+      previousListings.filter(listing => listing.id !== deletedListingId ))
 
+  }
 
   return (
     <div className="app">
@@ -45,6 +54,7 @@ function App() {
       <ListingForm addListing={addListing} />
       <ListingsContainer listings={listings}
         updateListing={updateListing}
+        deleteListing={deleteListing}
       />
     </div>
   );
