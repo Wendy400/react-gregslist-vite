@@ -21,18 +21,31 @@ function App() {
     listItems()
   }, [])
 
-  function addListing (newListings){
-    setListings(previousListings=>
-    [...previousListings, newListings]
+  //function to add items to the page GET
+  function addListing(newListings) {
+    setListings(previousListings =>
+      [...previousListings, newListings]
     )
   }
+
+  //function handle favorites PATCH
+  function updateListing(updatedListing) {
+    setListings(previousListings => {
+      previousListings.map(listing => {
+        listing.id === updatedListing.id ?
+          updateListing : listing
+      }
+      )}
+    )}
 
 
   return (
     <div className="app">
       <Header />
       <ListingForm addListing={addListing} />
-      <ListingsContainer listings={listings} />
+      <ListingsContainer listings={listings}
+        updateListing={updateListing}
+      />
     </div>
   );
 }
