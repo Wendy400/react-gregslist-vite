@@ -8,25 +8,18 @@
       "favorite": false
     },
     {
-      "id": "2",
-      "description": "2019 Toyota Tacoma grill",
-      "image": "/images/toyota-grill.jpg",
-      "location": "Williamsburg",
-      "favorite": true
-    },
-    {
       "id": "3",
       "description": "Free Braun 3735 Electric Toothbrush charger",
       "image": "/images/toothbrush-charger.jpg",
       "location": "Williamsburg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "4",
       "description": "FREE Hundreds of DVD/CD Cases - Different Sizes and Colors",
       "image": "/images/dvd-cases.jpg",
       "location": "Prospect Heights",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "5",
@@ -50,18 +43,11 @@
       "favorite": false
     },
     {
-      "id": "a7ad",
+      "id": "36fd",
       "description": "Melanin cup set",
       "image": "https://images.unsplash.com/photo-1781150363981-68490a49abeb?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
       "location": "SEATTLE",
-      "favorite": false
-    },
-    {
-      "id": "8b4f",
-      "description": "Bed",
-      "image": "https://images.unsplash.com/photo-1757417983938-2c2a931d41aa?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
-      "location": "West side",
-      "favorite": false
+      "favorite": true
     }
   ]
 }
